@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Portfolio & Resume Generator | Create Professional CVs</title>
+    <meta name="description" content="Free tool to create professional portfolios and resumes. No signup required. Download as HTML or PDF.">
+    <meta name="keywords" content="resume builder, portfolio generator, free cv maker, professional resume, portfolio website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>">
+</head>
+<body class="light-mode">
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-file-alt"></i><span>&nbsp;&nbsp;</span>
+                    Re<span>sum</span>mint
+                </a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+                    <a href="#generator"><i class="fas fa-magic"></i> Create</a>
+                    <a href="#templates"><i class="fas fa-palette"></i> Templates</a>
+                    <a href="#preview"><i class="fas fa-eye"></i> Preview</a>
+                    <a href="#examples"><i class="fas fa-star"></i> Examples</a>
+                    <a href="#download"><i class="fas fa-download"></i> Download</a>
+                </div>
+                
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <!-- <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div> -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Create <span class="highlight">Professional</span> Portfolios & Resumes <span class="highlight">100% Free</span></h1>
+                <p class="hero-subtitle">No signups, no payments, no limitations. Help people build their careers without expensive services.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>10,000+</h3>
+                            <p>Users Helped</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-file-download"></i>
+                        <div>
+                            <h3>25,000+</h3>
+                            <p>Resumes Created</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <div>
+                            <h3>100%</h3>
+                            <p>Free Forever</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-cta">
+                    <a href="#generator" class="btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Create Your Portfolio Now
+                    </a>
+                    <a href="#templates" class="btn-secondary btn-large">
+                        <i class="fas fa-eye"></i> Browse Templates
+                    </a>
+                </div>
+                
+                <p class="hero-note" style="display: inline-block;">
+                    <i class="fas fa-heart"></i> Built to help job seekers, students, and professionals worldwide
+                </p>
+            </div>
+            <div class="hero-image">
+                <div class="floating-resume">
+                    <div class="resume-demo">
+                        <div class="demo-header">Why is this free?</div>
+                        <div class="demo-content">
+                            <div class=""><p style="margin: 0;">
+    Because creating a resume should not cost money.
+    This tool is built to help students, freshers, and job seekers
+    who can’t afford expensive resume builders.
+  </p></div>
+                            <div class=""> <p>
+    No paywalls. No hidden charges. No watermarks.
+    Just a clean resume that helps you get hired.
+  </p></div>
+  
+                            <div class="demo-line"></div>
+                            <div class="demo-line short"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section class="generator-section" id="generator">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Build Your Perfect Portfolio</h2>
+                <p class="section-subtitle">Fill in your details step by step. All fields are optional.</p>
+                
+                <div class="progress-container">
+                    <div class="progress-steps">
+                        <div class="step active" data-step="1">
+                            <div class="step-icon">1</div>
+                            <span>Personal Info</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <div class="step-icon">2</div>
+                            <span>Education</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <div class="step-icon">3</div>
+                            <span>Experience</span>
+                        </div>
+                        <div class="step" data-step="4">
+                            <div class="step-icon">4</div>
+                            <span>Skills</span>
+                        </div>
+                        <div class="step" data-step="5">
+                            <div class="step-icon">5</div>
+                            <span>Customize</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="generator-container">
+                <!-- Form Section -->
+                <div class="form-container">
+                    <form id="portfolioForm">
+                        <!-- Step 1: Personal Information -->
+                        <div class="form-step active" data-step="1">
+                            <div class="form-step-header">
+                                <h3><i class="fas fa-user-circle"></i> Personal Information</h3>
+                                <p class="step-description">Basic details about you</p>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="input-group">
+                                    <label for="fullName">
+                                        <i class="fas fa-user"></i> Full Name *
+                                    </label>
+                                    <input type="text" id="fullName" placeholder="John Doe" required>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="profession">
+                                        <i class="fas fa-briefcase"></i> Profession/Title *
+                                    </label>
+                                    <input type="text" id="profession" placeholder="Web Developer" required>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i> Email Address *
+                                    </label>
+                                    <input type="email" id="email" placeholder="john@example.com" required>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i> Phone Number
+                                    </label>
+                                    <input type="tel" id="phone" placeholder="+1 234 567 8900">
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="fatherName">
+                                        <i class="fas fa-male"></i> Father's Name
+                                    </label>
+                                    <input type="text" id="fatherName" placeholder="Robert Doe">
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="motherName">
+                                        <i class="fas fa-female"></i> Mother's Name
+                                    </label>
+                                    <input type="text" id="motherName" placeholder="Jane Doe">
+                                </div>
+                                
+                                <div class="input-group full-width">
+                                    <label for="address">
+                                        <i class="fas fa-map-marker-alt"></i> Address
+                                    </label>
+                                    <textarea id="address" placeholder="123 Main Street, City, Country" rows="2"></textarea>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="dateOfBirth">
+                                        <i class="fas fa-birthday-cake"></i> Date of Birth
+                                    </label>
+                                    <input type="date" id="dateOfBirth">
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="nationality">
+                                        <i class="fas fa-globe"></i> Nationality
+                                    </label>
+                                    <input type="text" id="nationality" placeholder="American">
+                                </div>
+                                
+                                <div class="input-group full-width">
+                                    <label for="summary">
+                                        <i class="fas fa-file-alt"></i> Professional Summary
+                                    </label>
+                                    <textarea id="summary" placeholder="Brief summary about your career objectives and experience..." rows="4"></textarea>
+                                    <p class="hint">Write 2-3 sentences about yourself</p>
+                                </div>
+                            </div>
+                            
+                            <div class="social-links-form">
+                                <h4 style="display: inline-block;"><i class="fas fa-share-alt"></i> Social & Professional Links</h4>
+                                <div class="social-grid">
+                                    <div class="input-group">
+                                        <label for="linkedin">
+                                            <i class="fab fa-linkedin"></i> LinkedIn
+                                        </label>
+                                        <input type="url" id="linkedin" placeholder="https://linkedin.com/in/username">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="github">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </label>
+                                        <input type="url" id="github" placeholder="https://github.com/username">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="website">
+                                            <i class="fas fa-globe"></i> Personal Website
+                                        </label>
+                                        <input type="url" id="website" placeholder="https://yourwebsite.com">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="twitter">
+                                            <i class="fab fa-twitter"></i> Twitter
+                                        </label>
+                                        <input type="url" id="twitter" placeholder="https://twitter.com/username">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2: Education -->
+                        <div class="form-step" data-step="2">
+                            <div class="form-step-header">
+                                <h3><i class="fas fa-graduation-cap"></i> Education Background</h3>
+                                <p class="step-description">Add your educational qualifications</p>
+                            </div>
+                            
+                            <div class="dynamic-section" id="educationSection">
+                                <div class="section-item">
+                                    <div class="form-grid">
+                                        <div class="input-group">
+                                            <label>Degree/Qualification *</label>
+                                            <input type="text" class="education-degree" placeholder="Bachelor of Computer Science" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <label>Institution *</label>
+                                            <input type="text" class="education-institution" placeholder="University of Technology" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <label>Location</label>
+                                            <input type="text" class="education-location" placeholder="New York, USA">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>Graduation Year</label>
+                                            <input type="number" class="education-year" placeholder="2020" min="1950" max="2030">
+                                        </div>
+                                        <div class="input-group full-width">
+                                            <label>Description/Achievements</label>
+                                            <textarea class="education-description" placeholder="Relevant coursework, achievements, or honors..." rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-remove-section">
+                                        <i class="fas fa-trash"></i> Remove Education
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn-add-section" id="addEducationBtn">
+                                <i class="fas fa-plus"></i> Add Another Education
+                            </button>
+                        </div>
+                        
+                        <!-- Step 3: Work Experience -->
+                        <div class="form-step" data-step="3">
+                            <div class="form-step-header">
+                                <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                                <p class="step-description">Add your professional work history</p>
+                            </div>
+                            
+                            <div class="dynamic-section" id="experienceSection">
+                                <div class="section-item">
+                                    <div class="form-grid">
+                                        <div class="input-group">
+                                            <label>Job Title *</label>
+                                            <input type="text" class="experience-title" placeholder="Frontend Developer" required>
+                                        </div>
+                                        <div class="input-group">
+                                            <label>Company *</label>
+                                            <input type="text" class="experience-company" placeholder="Tech Solutions Inc." required>
+                                        </div>
+                                        <div class="input-group">
+                                            <label>Location</label>
+                                            <input type="text" class="experience-location" placeholder="San Francisco, CA">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>Start Date</label>
+                                            <input type="month" class="experience-start">
+                                        </div>
+                                        <div class="input-group">
+                                            <label>End Date</label>
+                                            <input type="month" class="experience-end">
+                                            <div class="checkbox-group">
+                                                <input type="checkbox" class="experience-current" id="currentWork">
+                                                <label for="currentWork">Currently Working</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group full-width">
+                                            <label>Responsibilities & Achievements</label>
+                                            <textarea class="experience-description" placeholder="Describe your responsibilities, achievements, and key contributions..." rows="4"></textarea>
+                                            <p class="hint">Use bullet points for better readability</p>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-remove-section">
+                                        <i class="fas fa-trash"></i> Remove Experience
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn-add-section" id="addExperienceBtn">
+                                <i class="fas fa-plus"></i> Add Another Experience
+                            </button>
+                        </div>
+                        
+                        <!-- Step 4: Skills & Projects -->
+                        <div class="form-step" data-step="4">
+                            <div class="form-step-header">
+                                <h3><i class="fas fa-code"></i> Skills & Projects</h3>
+                                <p class="step-description">Showcase your skills and projects</p>
+                            </div>
+                            
+                            <div class="skills-section">
+                                <h4><i class="fas fa-star"></i> Skills</h4>
+                                <div class="skills-input-container">
+                                    <div class="skills-tags" id="skillsTags">
+                                        <!-- Skills will be added here -->
+                                    </div>
+                                    <div class="skills-input-group">
+                                        <input type="text" id="skillInput" placeholder="Add a skill (e.g., JavaScript, Photoshop)">
+                                        <button type="button" class="btn-small" id="addSkillBtn">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                    <p class="hint">Add skills and rate your proficiency</p>
+                                </div>
+                                
+                                <div class="skills-levels" id="skillsLevels">
+                                    <!-- Skill levels will be added here -->
+                                </div>
+                            </div>
+                            
+                            <div class="projects-section">
+                                <h4><i class="fas fa-project-diagram"></i> Projects</h4>
+                                <div class="dynamic-section" id="projectsSection">
+                                    <div class="section-item">
+                                        <div class="form-grid">
+                                            <div class="input-group">
+                                                <label>Project Name *</label>
+                                                <input type="text" class="project-name" placeholder="E-commerce Website" required>
+                                            </div>
+                                            <div class="input-group">
+                                                <label>Project Link/URL</label>
+                                                <input type="url" class="project-url" placeholder="https://example.com">
+                                            </div>
+                                            <div class="input-group full-width">
+                                                <label>Description</label>
+                                                <textarea class="project-description" placeholder="Describe the project, technologies used, and your role..." rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-remove-section">
+                                            <i class="fas fa-trash"></i> Remove Project
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <button type="button" class="btn-add-section" id="addProjectBtn">
+                                    <i class="fas fa-plus"></i> Add Another Project
+                                </button>
+                            </div>
+                            
+                            <div class="certifications-section">
+                                <h4><i class="fas fa-award"></i> Certifications</h4>
+                                <div class="dynamic-section" id="certificationsSection">
+                                    <div class="section-item">
+                                        <div class="form-grid">
+                                            <div class="input-group">
+                                                <label>Certification Name</label>
+                                                <input type="text" class="certification-name" placeholder="AWS Certified Developer">
+                                            </div>
+                                            <div class="input-group">
+                                                <label>Issuing Organization</label>
+                                                <input type="text" class="certification-org" placeholder="Amazon Web Services">
+                                            </div>
+                                            <div class="input-group">
+                                                <label>Issue Date</label>
+                                                <input type="month" class="certification-date">
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn-remove-section">
+                                            <i class="fas fa-trash"></i> Remove Certification
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <button type="button" class="btn-add-section" id="addCertificationBtn">
+                                    <i class="fas fa-plus"></i> Add Another Certification
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 5: Customization -->
+                        <div class="form-step" data-step="5">
+                            <div class="form-step-header">
+                                <h3><i class="fas fa-palette"></i> Customization & Settings</h3>
+                                <p class="step-description">Customize the look and feel of your portfolio</p>
+                            </div>
+                            
+                            <div class="customization-section">
+                                <div class="customization-grid">
+                                    <div class="input-group">
+                                        <label for="templateSelect">
+                                            <i class="fas fa-object-group"></i> Template Style
+                                        </label>
+                                        <select id="templateSelect">
+                                            <option value="professional">Professional</option>
+                                            <option value="modern">Modern</option>
+                                            <option value="creative">Creative</option>
+                                            <option value="minimal">Minimal</option>
+                                            <option value="executive">Executive</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <label for="fontFamily">
+                                            <i class="fas fa-font"></i> Font Family
+                                        </label>
+                                        <select id="fontFamily">
+                                            <option value="'Poppins', sans-serif">Poppins (Modern)</option>
+                                            <option value="'Roboto', sans-serif">Roboto (Professional)</option>
+                                            <option value="'Montserrat', sans-serif">Montserrat (Clean)</option>
+                                            <option value="'Open Sans', sans-serif">Open Sans (Readable)</option>
+                                            <option value="'Lato', sans-serif">Lato (Corporate)</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <label for="templateColor">
+                                            <i class="fas fa-fill-drip"></i> Primary Color
+                                        </label>
+                                        <input type="color" id="templateColor" value="#4a6fa5">
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <label for="textColor">
+                                            <i class="fas fa-text-height"></i> Text Color
+                                        </label>
+                                        <input type="color" id="textColor" value="#333333">
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <label for="accentColor">
+                                            <i class="fas fa-paint-brush"></i> Accent Color
+                                        </label>
+                                        <input type="color" id="accentColor" value="#ff7e5f">
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <label for="backgroundColor">
+                                            <i class="fas fa-square"></i> Background Color
+                                        </label>
+                                        <input type="color" id="backgroundColor" value="#ffffff">
+                                    </div>
+                                    
+                                    <div class="input-group full-width">
+                                        <label for="layoutStyle">
+                                            <i class="fas fa-th-large"></i> Layout Style
+                                        </label>
+                                        <select id="layoutStyle">
+                                            <option value="single">Single Column</option>
+                                            <option value="two-column">Two Column</option>
+                                            <option value="modern">Modern Layout</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="checkbox-options">
+                                    <h4><i class="fas fa-cog"></i> Display Options</h4>
+                                    <div class="checkbox-grid">
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="showPhoto" checked>
+                                            <label for="showPhoto">Show Profile Photo Section</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="showSocial" checked>
+                                            <label for="showSocial">Show Social Media Links</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="showSkillsChart" checked>
+                                            <label for="showSkillsChart">Show Skills Proficiency Chart</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="showReferences" checked>
+                                            <label for="showReferences">Include References Section</label>
+                                        </div>
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="showHobbies" checked>
+                                            <label for="showHobbies">Show Hobbies & Interests</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Navigation Customization -->
+                                <div class="nav-customization-section" id="navCustomization">
+                                    <h4><i class="fas fa-bars"></i> Navigation Settings (HTML Only)</h4>
+                                    <div class="customization-grid">
+                                        <div class="input-group full-width">
+                                            <div class="checkbox-group">
+                                                <input type="checkbox" id="includeNavigation" checked>
+                                                <label for="includeNavigation">Include Navigation Bar in HTML</label>
+                                            </div>
+                                            <p class="hint">Adds a responsive navigation menu to your downloaded HTML portfolio</p>
+                                        </div>
+                                        
+                                        <div class="input-group">
+                                            <label for="navStyle">
+                                                <i class="fas fa-palette"></i> Navigation Style
+                                            </label>
+                                            <select id="navStyle">
+                                                <option value="standard">Standard</option>
+                                                <option value="minimal">Minimal</option>
+                                                <option value="sticky">Sticky Header</option>
+                                                <option value="transparent">Transparent</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="hobbies-section">
+                                    <h4><i class="fas fa-heart"></i> Hobbies & Interests</h4>
+                                    <div class="hobbies-input">
+                                        <input type="text" id="hobbyInput" placeholder="Add hobby (e.g., Photography, Hiking)">
+                                        <button type="button" class="btn-small" id="addHobbyBtn">
+                                            <i class="fas fa-plus"></i> Add
+                                        </button>
+                                    </div>
+                                    <div class="hobbies-tags" id="hobbiesTags">
+                                        <!-- Hobbies will be added here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Buttons -->
+                        <div class="form-navigation">
+                            <button type="button" class="btn-secondary" id="prevStepBtn">
+                                <i class="fas fa-arrow-left"></i> Previous
+                            </button>
+                            <button type="button" class="btn-primary" id="nextStepBtn">
+                                Next <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <button type="submit" class="btn-success" id="generateBtn">
+                                <i class="fas fa-magic"></i> Generate Portfolio
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Live Preview -->
+                <div class="preview-container" id="preview">
+                    <div class="preview-header">
+                        <h3><i class="fas fa-eye"></i> Live Preview</h3>
+                        <div class="preview-actions">
+                            <button class="btn-small" id="togglePreviewMode">
+                                <i class="fas fa-mobile-alt"></i> Mobile
+                            </button>
+                            <button class="btn-small" id="refreshPreviewBtn">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-box" id="portfolioPreview">
+                        <div class="preview-device">
+                            <div class="device-frame">
+                                <div class="device-header">
+                                    <div class="device-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="preview-content" id="previewContent">
+                                    <!-- Preview will be rendered here -->
+                                    <div class="preview-placeholder">
+                                        <i class="fas fa-user-circle"></i>
+                                        <h4>Your Portfolio Preview</h4>
+                                        <p>Fill the form to see your portfolio come to life</p>
+                                        <p class="small">Changes appear in real-time</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-stats">
+                        <div class="preview-stat">
+                            <i class="fas fa-file-alt"></i>
+                            <span id="previewSections">0</span> Sections
+                        </div>
+                        <div class="preview-stat">
+                            <i class="fas fa-code"></i>
+                            <span id="previewWords">0</span> Words
+                        </div>
+                        <div class="preview-stat">
+                            <i class="fas fa-paint-brush"></i>
+                            <span id="previewTemplate">Professional</span> Template
+                        </div>
+                    </div>
+                    
+                    <!-- Download Buttons -->
+                    <div class="preview-controls">
+                        <button class="btn-primary" id="downloadHTMLBtn">
+                            <i class="fas fa-download"></i> Download HTML
+                        </button>
+                        <button class="btn-success" id="downloadPDFBtn">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </button>
+                        <button class="btn-secondary" id="sharePortfolioBtn">
+                            <i class="fas fa-share"></i> Share
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Gallery -->
+    <section class="templates-section" id="templates">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Templates</h2>
+                <p class="section-subtitle coming-soon neon">Cooming Soon!</p>
+            </div>
+            
+            <!-- <div class="templates-filter">
+                <button class="filter-btn active" data-filter="all">All Templates</button>
+                <button class="filter-btn" data-filter="professional">Professional</button>
+                <button class="filter-btn" data-filter="creative">Creative</button>
+                <button class="filter-btn" data-filter="minimal">Minimal</button>
+                <button class="filter-btn" data-filter="executive">Executive</button>
+            </div>
+             -->
+            <!-- <div class="templates-grid">
+                Templates will be loaded dynamically
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section class="examples-section" id="examples">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Real Portfolio Examples</h2>
+                <p class="section-subtitle coming-soon neon">Coming Soon!</p>
+            </div>
+            
+            <!-- <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-preview" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <div class="example-badge">Web Developer</div>
+                    </div>
+                    <div class="example-info">
+                        <h4>John Smith</h4>
+                        <p>Full Stack Developer Portfolio</p>
+                        <div class="example-stats">
+                            <span><i class="fas fa-eye"></i> 4 sections</span>
+                            <span><i class="fas fa-download"></i> 245 downloads</span>
+                        </div>
+                        <button class="btn-template" data-example="developer">
+                            <i class="fas fa-eye"></i> View Example
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-preview" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <div class="example-badge">Graphic Designer</div>
+                    </div>
+                    <div class="example-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Creative Design Portfolio</p>
+                        <div class="example-stats">
+                            <span><i class="fas fa-eye"></i> 6 sections</span>
+                            <span><i class="fas fa-download"></i> 189 downloads</span>
+                        </div>
+                        <button class="btn-template" data-example="designer">
+                            <i class="fas fa-eye"></i> View Example
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-preview" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <div class="example-badge">Marketing Expert</div>
+                    </div>
+                    <div class="example-info">
+                        <h4>Michael Chen</h4>
+                        <p>Digital Marketing Portfolio</p>
+                        <div class="example-stats">
+                            <span><i class="fas fa-eye"></i> 5 sections</span>
+                            <span><i class="fas fa-download"></i> 312 downloads</span>
+                        </div>
+                        <button class="btn-template" data-example="marketing">
+                            <i class="fas fa-eye"></i> View Example
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Our Free Tool?</h2>
+                <p class="section-subtitle">We believe everyone deserves access to professional career tools</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock-open"></i>
+                    </div>
+                    <h4>100% Free Forever</h4>
+                    <p>No hidden fees, no premium plans. We're committed to keeping this tool completely free.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>No Signup Required</h4>
+                    <p>Create and download instantly without creating an account. Your privacy is protected.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h4>PDF & HTML Export</h4>
+                    <p>Download in multiple formats: Print-ready PDF or editable HTML for your website.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4>Mobile Responsive</h4>
+                    <p>All portfolios are optimized for mobile, tablet, and desktop devices.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h4>ATS Friendly</h4>
+                    <p>Our templates are designed to pass through Applicant Tracking Systems.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-download-alt"></i>
+                    </div>
+                    <h4>Offline Access</h4>
+                    <p>Downloaded portfolios work completely offline - no internet required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="download">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-file-alt"></i>
+                    <span>&nbsp;&nbsp;</span>
+                    Re<span>sum</span>mint
+                </div>
+                <p class="footer-mission" style="display: inline-block;">
+                    <i class="fas fa-heart" style="display: inline-block; color: #ff4757;"></i> Our mission is to provide free, professional career tools to everyone, 
+                    especially those who can't afford expensive resume services.
+                </p>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#generator">Create Portfolio</a>
+                        <a href="#templates">Templates</a>
+                        <a href="#examples">Examples</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#" id="resumeTipsBtn">Resume Tips</a>
+                        <a href="#" id="coverLetterBtn">Cover Letter Guide</a>
+                        <a href="#" id="interviewTipsBtn">Interview Tips</a>
+                        <a href="#" id="careerGuideBtn">Career Guide</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#" id="contactBtn">Contact Us</a>
+                        <a href="#" id="faqBtn">FAQ</a>
+                        <a href="#" id="donateBtn">Donate</a>
+                        <a href="#" id="shareBtn">Share Tool</a>
+                    </div>
+                </div>
+                
+                <div class="footer-cta">
+                    <h4>Help Others Find This Tool</h4>
+                    <p>Share with friends, family, or on social media to help more people build their careers.</p>
+                    <div class="social-share">
+                        <button class="social-btn facebook">
+                            <i class="fab fa-facebook-f"></i> Share
+                        </button>
+                        <button class="social-btn twitter">
+                            <i class="fab fa-twitter"></i> Tweet
+                        </button>
+                        <button class="social-btn linkedin">
+                            <i class="fab fa-linkedin-in"></i> Share
+                        </button>
+                        <button class="social-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i> Share
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">
+  &copy; 2026 Free Resume Generator. Made with 
+  <i class="fas fa-heart" style="color: #ff4757;"></i> 
+  to help job seekers worldwide. Built by 
+  <a href="https://www.abhisheket.com" target="_blank" rel="noopener noreferrer" class="author-link">
+    Abhishek
+  </a>.
+</p>
+
+                    <p class="disclaimer">
+                        This tool is completely free. We don't store any personal data. All processing happens in your browser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-check-circle"></i> Portfolio Generated Successfully!</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-animation">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h4>Your portfolio is ready!</h4>
+                <p>You can now download it in multiple formats or continue editing.</p>
+                
+                <div class="download-options">
+                    <button class="download-option" id="downloadPDFFinal">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Download PDF<br><small>Print Ready</small></span>
+                    </button>
+                    <button class="download-option" id="downloadHTMLFinal">
+                        <i class="fas fa-code"></i>
+                        <span>Download HTML<br><small>With Navigation</small></span>
+                    </button>
+                    <button class="download-option" id="downloadDOCX">
+                        <i class="fas fa-file-word"></i>
+                        <span>Download DOCX<br><small>Coming Soon</small></span>
+                    </button>
+                </div>
+                
+                <div class="modal-actions">
+                    <button class="btn-secondary" id="continueEditing">Continue Editing</button>
+                    <button class="btn-primary" id="createAnother">Create Another</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Generating your portfolio...</p>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+</html>
